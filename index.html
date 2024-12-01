@@ -1,188 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ch-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>python程序与设计社团</title>
-</head>
-<body>
-    <h1>python程序与设计社团</h1>
-    <p>欢迎来到python程序与设计社团！</p>
-    <p>无锡市太湖格致中学初一</p>
-    <h2>分享一些知识点</h2>
-    <pre>
-     (一) print知识点
-        print()  打印  填入字符串 (以"内容"为格式) ，变量
-        print("前面" + "后面")  字符串连接加打印
-        print("第一行\n第二行")  换行打印 (\n为换行)
+    <title>flex</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+            font-family: "Source Han Sans", sans-serif; 
+        }
+        .flex{
+            display: flex;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        /* .shadow{
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px ,rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        } */
+        .baiSe{
+            background-color: white;
+        } 
+        .flex1{
+            flex:1
+        }
+        .colum{
+            flex-direction: column;
+        } 
+        .mg8{
+           margin: 8px; 
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daoHang{
+            padding: 10px 20px;
+            /* border-bottom: 1px solid rgb(190,190,190); */
+            font-size: 14px;
+            color: #ffffff;
+            margin: 3px;
+            border-radius: 5px;
 
-
-        (二) 变量知识点
-        number1 = 10  变量赋值
-        number2 = number1  用第一个变量对第二个变量进行赋值
-        number1 = number1 + 10  将变量设为变量加10 (等于变量加10)
-
-        变量取名
-        1.只能由文字，数字，下划线组成。
-        2.不能数字开头
-        3.尽量取得易于理解和记忆、
-        4.不要用拼音
-
-
-        (三) 数学运算
-        数学运算可用数据类型
-            整数：不带小数点
-            浮点数：带小数点的
-        数学运算中的符号
-            常用 加 +    减 -   乘 *    除 /    次方 ** 
-            其他的 math 库中,使用时math.函数名()
-
-        (四) 数据类型 
-        python中的数据类型
-            "你好"  "hello"          字符串 str               str()    转换成字符串
-            6      32                整数  int               int("")  转换成整数
-            3.4    10.23             浮点数 float            float("") 转换成浮点数
-            True   False             布尔值 bool     
-                Nine                 空值类型 None Type
-
-        len("字符")  字符串长度 
-        "字符"[2]  字符串中第方扩号中的数字字符 (从零开始)   
-        type()  返回对象类型
-
-
-        (五)条件语句
-        if [条件]:  如果 (条件为布尔值)
-        [条件为真执行语句]
-        else:[条件为假时执行的语句]   
-        比较运算符
-            ==     是否等于
-            !=     是否不相等
-            <    >     <=     >=     含义和数学中的符号相等
-
-            
-        (五)逻辑运算
-        and  并且
-        or   或者
-        not  不
-
-
-        (六)列表
-        new_list = ["1","2","3"]  新建列表,内容有1、2、3
-        new_list.append("4")      在列表中加入新内容
-        new_list.remove("4")      在列表中删除指定内容
-        new_list = [2]            列表中指定位置的内容
-        new_list[2] = "3"         将指定位置的内容替换成新的
-        new_list.index("3")       返回列表中指定内容的项,可以复制给变量
-
-        max()                     返回列表中的最大值
-        min()                     返回列表中的最小值
-        sorted()                  返回排序好的新列表
-
-
-        (七)字典
-        new_dict = {"项目1":"输出项目1"
-                    "项目2":"输出项目2"}  创建新字典
-        new_dict["项目1"]                查找指定的值
-        "项目1" in new_dict              指定内容是否存在
-        del new_dict["项目2"]            删除指定内容
-
-        new_tuple = ("项目1","项目2")    创建新元组
-
-        new_tuple_dict.keys()           所有键
-        new_tuple_dict.values()         所有值
-        new_tuple_dict.items()          所有键值对
-                    
-                                
-        (八)循环
-        for 变量名 in 可迭代的对象:        对变量进行迭代
-            对变量做的一些事
-            ......
-
-        for i in range(5,10,2)          重复执行i次缩进中的代码   
-            重复做的事                    i会被依次赋值为5到9点数字,每次相隔2 
-            ......    
-
-        while 布尔值:                    重复执行直到条件成立
-            重复做的事
-            ......    
-
-
-        (九)格式化字符串 
-        new_note = ""'
-        不变值,不变值
-        变值1{0},变值2{1}
-        """.for(1,2)
-
-        number1 = 1
-        number2 = 2
-        new_note = f"""
-        变值1={number1}
-        变值2={number2}
-        """
-
-        strip()                         删除字符串的空格
-
-
-        (十)函数
-        def 函数名 ():
-            定义含数的代码
-            ......
-
-        def 函数名 (parameter1，parameter2):
-            定义含数的代码，可以用可以用上面点两个参数
-            ......
-            return = parameter1 = parameter2
-            return parameter1
-
-
-        (十一)引入模块
-        import 函数名
-        使用时 函数.模块名\函数名.变量名
-
-
-        from 函数名 import 要使用的函数\变量(多个用逗号进行分隔)
-        使用时不需要带上模块的名字
-
-
-        from 函数名 import*
-        使用时不需要带上模块的名字
-
-
-        (十二)文件操作
-        用来储存的变量 = open("文件路径"，"模式"，encoding = "编码")
-            模式：
-                r 只读
-                
-            编码：
-                utf-8 纯文本
-
-
-
-        (十三)和用户交互
-        iuput("给用户提示的信息")  获取用户输入的信息
-        user_name = iuput("用户名")  用用户输入的信息对变量赋值
-
-
-        (十四)格式
-
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    </pre>
-
+        }
+        .diamond{
+            text-align:center;
+            line-height:100px;
+            color: #eee;
+        }
+        .nwes{
+            height: 160px ;
+            display: flex ;
+            align-items: center;
+        }
+        .image{
+            height: 90%; 
+            padding: 2%;
+        }
+        .website{
+            text-decoration:none; color:rgb(0, 0, 0)
+        }
+    </style>
+</head> 
+<body class="flex">
+    <!--侧边栏 -->
+    <div style="width: 200px;z-index: 1;background-color:  rgb(62, 103, 147);" class="baiSe shadow">
+        <!-- 头像栏 -->
+         <div class="flex">
+            <img src="photo/python_logo.png" width="170" style="padding: 20px;">
+         </div>
+        <!-- 导航栏 -->
+         <div class="flex1">
+            <div class="daoHang"><a href="index.html" style="color: white;text-decoration:none;">网站首页</a></div>
+            <div class="daoHang">网站简介</div>
+            <div class="daoHang">作者名单</div>
+            <div class="daoHang">贡献名单</div>
+            <div class="daoHang">加入我们</div>
+            <div class="daoHang">联系方式</div>
+         </div>
+    </div>
+    <!--主区域  -->
+    <div class="flex1 flex colum">
+        <!-- 头部栏 -->
+        <div style="height: 60px ;z-index: 1;  white-space:nowrap; " class="baiSe shadow">
+            <input type="text" placeholder="没用的,没做好..." style="margin: 10px; height: 60%; width: 80%; border-radius: 25px;">
+        </div>
+        <!-- 内容栏 -->
+        <div class="flex1 flex" style="overflow: auto;"> 
+            <!--  左区 -->
+            <div style="flex: 3" class="flex colum mg8">
+                <!-- 数据区 -->
+                <div class="flex">
+                    <!-- 数据块 -->
+                    <div style="height: 100px; background-color: rgb(87, 161, 103);"  class="flex1 baiSe mgr8 shadow diamond"><a href="" class="website" style="color: white;">重点知识</a ><br/></div>
+                    <div style="height: 100px; background-color: rgb(97, 141, 157);"  class="flex1 baiSe mgr8 shadow diamond"><a href="download.html" class="website" style="color: white;">下载中心</a><br/></div>
+                    <div style="height: 100px; background-color: rgb(205, 148, 113);" class="flex1 baiSe mgr8 shadow diamond"><a href="" class="website" style="color: white;">历史消息</a><br/></div>
+                    <div style="height: 100px; background-color: rgb(161, 87, 87);"   class="flex1 baiSe shadow diamond"><a href="" class="website" style="color: white;">下载文档</a><br/></div>
+                </div>
+                <!-- 列表区 -->
+                <div class="flex colum"> 
+                    <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image1-1.png" class="image">
+                        <img src="photo/image1-2.png" class="image">
+                        <a href="http://www.baidu.com"class="website">
+                            专题文章:什么是python<br>来源：python程序与设计社团 <br>发布时间：2024-11-29 08:40:34
+                        </a>    
+                    </div>
+                     <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image2-1.png" class="image">
+                        <img src="photo/image2-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            最新公告<br> ——上课要准备的东西<br>来源：python程序与设计社团 发布时间：2024-11-29 07:51:34 
+                        </a>    
+                    </div>
+                     <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image3-1.png" class="image">
+                        <img src="photo/image3-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            下节课内容预测<br> 我也不知道🤷<br>来源：尚贤教育集团 发布时间：2024-06-18 08:03:22
+                        </a>    
+                    </div>
+                    <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image4-1.png" class="image">
+                        <img src="photo/image4-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            重大好消息<br> python程序与设计社团官网上线<br>来源：尚贤教育集团 发布时间：2024-05-23 08:30:08 
+                        </a>            
+                    </div>
+                    <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image5-1.png" class="image">
+                        <img src="photo/image5-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            “网站更新建议反馈,周四下午社团课<br>来源：网站作者 发布时间：2024-11-29 15:51:3
+                        </a> 
+                        
+                    </div>
+                    <div class="baiSe mgt8 shadow " style="background-color: #5d5d5d; height: 65px; display: flex ;align-items: center;">
+                        <span style="color: white; font-size: 16px; margin: 0 auto;">主办单位:金坷垃科技 ©️版权没有,仿冒不纠(我才不管呢) 虚假备案JKL147845号-6 </span>
+                    </div>
+                </div>
+            </div>
+            <!--右区 -->
+            <div style="flex: 1" class="flex colum">
+                <!-- 提示区 -->
+                <div style="height: 150px; text-align: center" class="baiSe shadow flex1">
+                    <img src="photo/j-1.png" style="padding: 3%;width: 94%;border-radius: 25px">  
+                    <span style="text-align: center;">喜报！</span>
+                    <span style="color: #939292;"><br>热烈祝贺我校薛晶老师<br>在无锡经开区2021年<br>小学劳动...</span>
+                    <img src="photo/j-2.png" style="padding: 3%;width: 94%;border-radius: 25px">
+                    <span style="text-align: center;;">喜报！</span>
+                    <span style="color: #939292;"><br>热烈祝贺我校曹雅纯老师<br>在无锡经开区2021年<br>小学劳动...</span>
+                <div>   
+            </div>
+                <!-- 消息区 -->
+                <div style="height: 300px; width: 10%; font-size:small" class="baiSe mgt shadow">
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
