@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ch-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+            font-family: "Source Han Sans", sans-serif; 
+        }
+        .flex{
+            display: flex;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        /* .shadow{
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px ,rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        } */
+        .baiSe{
+            background-color: white;
+        } 
+        .flex1{
+            flex:1
+        }
+        .colum{
+            flex-direction: column;
+        } 
+        .mg8{
+           margin: 8px; 
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daoHang{
+            padding: 10px 20px;
+            /* border-bottom: 1px solid rgb(190,190,190); */
+            font-size: 14px;
+            color: #ffffff;
+            margin: 3px;
+            border-radius: 5px;
+
+        }
+        .diamond{
+            text-align:center;
+            line-height:100px;
+            color: #eee;
+        }
+        .nwes{
+            height: 160px ;
+            display: flex ;
+            align-items: center;
+        }
+        .image{
+            height: 90%; 
+            padding: 2%;
+        }
+        .website{
+            text-decoration:none; color:rgb(0, 0, 0)
+        }
+        .word{
+            margin: 20px;
+        }
+    </style>
+</head> 
+<body class="flex">
+    <!--侧边栏 -->
+    <div style="width: 200px;z-index: 1;background-color:  rgb(62, 103, 147);" class="baiSe shadow">
+        <!-- 头像栏 -->
+         <div class="flex">
+            <img src="photo/python_logo.png" width="170" style="padding: 20px;">
+         </div>
+        <!-- 导航栏 -->
+         <div class="flex1">
+            <div class="daoHang"><a href="index.html" style="color: white;text-decoration:none;">网站首页</a></div>
+            <div class="daoHang">网站简介</div>
+            <div class="daoHang">作者名单</div>
+            <div class="daoHang">贡献名单</div>
+            <div class="daoHang">加入我们</div>
+            <div class="daoHang">联系方式</div>
+         </div>
+    </div>
+    <!--主区域  -->
+    <div class="flex1 flex colum">
+        <!-- 头部栏 -->
+        <div style="height: 60px ;z-index: 1;  white-space:nowrap; " class="baiSe shadow">
+            <input type="text" placeholder="没用的,没做好..." style="margin: 10px; height: 60%; width: 80%; border-radius: 25px;">
+        </div>
+
+            <!--  左区 -->
+            <div >
+                <!-- 正文区 -->
+                <div style="margin: 20px; text-align: center;">
+                    <!-- 居中 -->
+                    <h2 > 下载中心-python相关软件分享和下载</h2>
+                    <p style="color: rgb(103, 103, 103);" class="word">更新时间 2024-11-29(由于学校电脑是win7x32位,版本较老)</p>
+                    <h5>受githup限制,文件被分成4个,全部下载后点击任意一个解压安转包,如果解压失败请自行安装软件进行解压</h5>
+                        <a href="download_f/VSCodeSetup-ia32-1.70.2.7z.001" download class=" word" style="color: rgb(62, 103, 147);">VS code下载1</a><br>
+                        <a href="download_f/VSCodeSetup-ia32-1.70.2.7z.002" download class=" word" style="color: rgb(62, 103, 147);">VS code下载2</a><br>
+                        <a href="download_f/VSCodeSetup-ia32-1.70.2.7z.003" download class=" word" style="color: rgb(62, 103, 147);">VS code下载3</a><br>
+                        <a href="download_f/VSCodeSetup-ia32-1.70.2.7z.004" download class=" word" style="color: rgb(62, 103, 147);">VS code下载4</a><br>
+                        <span>简单好用的多语言编辑器,轻量化,界面简洁好看</span>
+                        <h4>vs code使用教程</h4>
+                        <p>在安装完成后点击安装包,勾选同意条款,安装在想要的位置,打开后点击左下角的扩展按钮搜索</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

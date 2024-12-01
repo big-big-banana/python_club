@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ch-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+            font-family: "Source Han Sans", sans-serif; 
+        }
+        .flex{
+            display: flex;
+        }
+        /* *{
+            border: 1px solid black;
+        } */
+        /* .shadow{
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+                rgb(0 0 0 / 14%) 0px 1px 1px 0px ,rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        } */
+        .baiSe{
+            background-color: white;
+        } 
+        .flex1{
+            flex:1
+        }
+        .colum{
+            flex-direction: column;
+        } 
+        .mg8{
+           margin: 8px; 
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .daoHang{
+            padding: 10px 20px;
+            /* border-bottom: 1px solid rgb(190,190,190); */
+            font-size: 14px;
+            color: #ffffff;
+            margin: 3px;
+            border-radius: 5px;
+
+        }
+        .diamond{
+            text-align:center;
+            line-height:100px;
+            color: #eee;
+        }
+        .nwes{
+            height: 160px ;
+            display: flex ;
+            align-items: center;
+        }
+        .image{
+            height: 90%; 
+            padding: 2%;
+        }
+        .website{
+            text-decoration:none; color:rgb(0, 0, 0)
+        }
+    </style>
+</head> 
+<body class="flex">
+    <!--侧边栏 -->
+    <div style="width: 200px;z-index: 1;background-color:  rgb(62, 103, 147);" class="baiSe shadow">
+        <!-- 头像栏 -->
+         <div class="flex">
+            <img src="photo/python_logo.png" width="170" style="padding: 20px;">
+         </div>
+        <!-- 导航栏 -->
+         <div class="flex1">
+            <div class="daoHang"><a href="index.html" style="color: white;text-decoration:none;">网站首页</a></div>
+            <div class="daoHang">网站简介</div>
+            <div class="daoHang">作者名单</div>
+            <div class="daoHang">贡献名单</div>
+            <div class="daoHang">加入我们</div>
+            <div class="daoHang">联系方式</div>
+         </div>
+    </div>
+    <!--主区域  -->
+    <div class="flex1 flex colum">
+        <!-- 头部栏 -->
+        <div style="height: 60px ;z-index: 1;  white-space:nowrap; " class="baiSe shadow">
+            <input type="text" placeholder="没用的,没做好..." style="margin: 10px; height: 60%; width: 80%; border-radius: 25px;">
+        </div>
+        <!-- 内容栏 -->
+        <div class="flex1 flex" style="overflow: auto;"> 
+            <!--  左区 -->
+            <div style="flex: 3" class="flex colum mg8">
+                <!-- 数据区 -->
+                <div class="flex">
+                    <!-- 数据块 -->
+                    <div style="height: 100px; background-color: rgb(87, 161, 103);"  class="flex1 baiSe mgr8 shadow diamond"><a href="" class="website" style="color: white;">重点知识</a ><br/></div>
+                    <div style="height: 100px; background-color: rgb(97, 141, 157);"  class="flex1 baiSe mgr8 shadow diamond"><a href="download.html" class="website" style="color: white;">下载中心</a><br/></div>
+                    <div style="height: 100px; background-color: rgb(205, 148, 113);" class="flex1 baiSe mgr8 shadow diamond"><a href="" class="website" style="color: white;">历史消息</a><br/></div>
+                    <div style="height: 100px; background-color: rgb(161, 87, 87);"   class="flex1 baiSe shadow diamond"><a href="" class="website" style="color: white;">下载文档</a><br/></div>
+                </div>
+                <!-- 列表区 -->
+                <div class="flex colum"> 
+                    <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image1-1.png" class="image">
+                        <img src="photo/image1-2.png" class="image">
+                        <a href="http://www.baidu.com"class="website">
+                            专题文章:什么是python<br>来源：python程序与设计社团 <br>发布时间：2024-11-29 08:40:34
+                        </a>    
+                    </div>
+                     <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image2-1.png" class="image">
+                        <img src="photo/image2-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            最新公告<br> ——上课要准备的东西<br>来源：python程序与设计社团 发布时间：2024-11-29 07:51:34 
+                        </a>    
+                    </div>
+                     <!-- 列表项 -->
+                     <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image3-1.png" class="image">
+                        <img src="photo/image3-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            下节课内容预测<br> 我也不知道🤷<br>来源：尚贤教育集团 发布时间：2024-06-18 08:03:22
+                        </a>    
+                    </div>
+                    <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image4-1.png" class="image">
+                        <img src="photo/image4-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            重大好消息<br> python程序与设计社团官网上线<br>来源：尚贤教育集团 发布时间：2024-05-23 08:30:08 
+                        </a>            
+                    </div>
+                    <div  class="baiSe mgt8 shadow nwes"> 
+                        <img src="photo/image5-1.png" class="image">
+                        <img src="photo/image5-2.png" class="image">
+                        <a href="http://www.baidu.com" class="website">
+                            “网站更新建议反馈,周四下午社团课<br>来源：网站作者 发布时间：2024-11-29 15:51:3
+                        </a> 
+                        
+                    </div>
+                    <div class="baiSe mgt8 shadow " style="background-color: #5d5d5d; height: 65px; display: flex ;align-items: center;">
+                        <span style="color: white; font-size: 16px; margin: 0 auto;">主办单位:金坷垃科技 ©️版权没有,仿冒不纠(我才不管呢) 虚假备案JKL147845号-6 </span>
+                    </div>
+                </div>
+            </div>
+            <!--右区 -->
+            <div style="flex: 1" class="flex colum">
+                <!-- 提示区 -->
+                <div style="height: 150px; text-align: center" class="baiSe shadow flex1">
+                    <img src="photo/j-1.png" style="padding: 3%;width: 94%;border-radius: 25px">  
+                    <span style="text-align: center;">喜报！</span>
+                    <span style="color: #939292;"><br>热烈祝贺我校薛晶老师<br>在无锡经开区2021年<br>小学劳动...</span>
+                    <img src="photo/j-2.png" style="padding: 3%;width: 94%;border-radius: 25px">
+                    <span style="text-align: center;;">喜报！</span>
+                    <span style="color: #939292;"><br>热烈祝贺我校曹雅纯老师<br>在无锡经开区2021年<br>小学劳动...</span>
+                <div>   
+            </div>
+                <!-- 消息区 -->
+                <div style="height: 300px; width: 10%; font-size:small" class="baiSe mgt shadow">
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
