@@ -1,0 +1,75 @@
+/* Reset basic styles */
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #eee;
+    font-family: "Source Han Sans", sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(62, 103, 147);
+    z-index: 1;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar img {
+    width: 170px;
+    padding: 20px;
+}
+
+/* Navigation inside the sidebar */
+.daoHang {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 200px;  /* Ensures content starts after the sidebar */
+    margin-top: 60px;  /* Makes space for the header */
+    flex: 1;
+    overflow-y: auto;  /* Allow scrolling for content */
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header input {
+    margin: 10px;
+    height: 60%;
+    width: 80%;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+/* Content styles */
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.content img {
+    width: 100%;
+}
