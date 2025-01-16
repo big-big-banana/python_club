@@ -73,3 +73,8 @@ body {
 .content img {
     width: 100%;
 }
+.website {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+}
